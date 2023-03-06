@@ -5,7 +5,6 @@
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.WriteLine("yearly salary : ");
         bool salaryIsInt = int.TryParse(Console.ReadLine(), out int salary);
-
         if(salaryIsInt)
         {
             Console.WriteLine("taxes per cent");
