@@ -14,5 +14,6 @@
     {
         Console.WriteLine("salary : " + salary / 12 + "€");
         Console.WriteLine("after taxes : " + ((salary / 12) - ((taxes / 100) * (salary / 12))) + "€");
+
     }
 }
