@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-
+         
         User user1 = new User(1, "Raphael", "Breham", 19, 1500, 20);
 
         Console.WriteLine(user1.Id);

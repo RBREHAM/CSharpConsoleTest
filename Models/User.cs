@@ -10,7 +10,7 @@
             this.Old = old;
             this.Salary = salary;
             this.Tax = tax;
-        }
+        } 
 
         public int Id { get; set; }
         public string FirstName { get; set; }
