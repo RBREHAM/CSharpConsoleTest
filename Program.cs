@@ -37,7 +37,7 @@ class Program
         {
             salary = user2.Salary;
         }
-        catch(FormatException)
+        catch (FormatException)
         {
             Console.WriteLine("Mauvais format !");
         }
@@ -75,7 +75,7 @@ class Program
 
     static double CalculSalary(double salary, double taxes)
     {
-        double salary2 = (salary/12) - (taxes/100 * (salary/12));
+        double salary2 = (salary / 12) - (taxes / 100 * (salary / 12));
         return salary2;
     }
 
