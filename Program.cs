@@ -7,24 +7,25 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        string[] calendrier = new string[12];
-        calendrier[0] = "Janvier";
-        calendrier[1] = "Fevrier";
-        calendrier[2] = "Mars";
-        calendrier[3] = "Avril";
-        calendrier[4] = "Mai";
-        calendrier[5] = "Juin";
-        calendrier[6] = "Juillet";
-        calendrier[7] = "Aout";
-        calendrier[8] = "Septembre";
-        calendrier[9] = "Octobre";
-        calendrier[10] = "Novembre";
-        calendrier[11] = "Decembre";
+        double salary = 0;
 
-        Console.WriteLine("Salaire annuel : ");
-        double.TryParse(Console.ReadLine(), out double salary);
+        string[] calendrier = new string[] { "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" };
+
+        try
+        {
+            Console.WriteLine("Salaire annuel : ");
+            salary = double.Parse(Console.ReadLine());
+        }
+        catch(FormatException)
+        {
+            Console.WriteLine("Mauvais format !");
+        }
+        
         Console.WriteLine("taxe : ");
         double.TryParse(Console.ReadLine(), out double taxe);
+        Console.WriteLine("taxe de Noel : ");
+        double.TryParse(Console.ReadLine(), out double Xmasprime);
+
 
         foreach (string i in calendrier)
         {
@@ -37,7 +38,7 @@ class Program
                 double salaireNet = CalculSalary(salary, taxe);
                 if (i == "Decembre")
                 {
-                    salaireNet = salaireNet + (0.1 * salaireNet);
+                    salaireNet = salaireNet + ((Xmasprime/100) * salaireNet);
                 }
                 Console.WriteLine("Salaire net du mois de " + i + " : " + salaireNet + "€");
             }
